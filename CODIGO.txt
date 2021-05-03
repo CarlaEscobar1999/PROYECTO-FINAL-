@@ -1,0 +1,66 @@
+# Importamos librería
+import pandas as pd
+import matplotlib.pyplot as plt
+
+seguroautos = pd.read_csv("segautos.csv")
+
+
+del(seguroautos['NumAseguradoras'])
+del(seguroautos['Anio2017'])
+del(seguroautos['Anio2016'])
+del(seguroautos['Anio2015'])
+del(seguroautos['CostMedEnt'])
+
+# 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+seguroautosrobado = pd.read_csv("segautosrobados.csv")
+
+
+del(seguroautosrobados['NoRecuperados'])
+del(seguroautosrobados['Anio2017'])
+del(seguroautosrobados['Anio2016'])
+del(seguroautosrobados['Anio2015'])
+del(seguroautosrobados['CasViolencia'])
+del(seguroautosrobados['MedioAutos])
+
+seguroautosrobados.rename(columns={'Est':'Entidad'},inplace=True)
+seguroautosrobados.rename(columns={'AR':'Asegurados Robados'},inplace=True)
+seguroautosrobados.rename(columns={'FR':'Frecuencia Robados'},inplace=True)
+seguroautosrobados.rename(columns={'NR':'Nuemero de robos'},inplace=True)
+seguroautosrobados.rename(columns={'PDAR':'Promedio diario de autos robados'},inplace=True)
+
+#
+import pandas as pd
+import matplotlib.pyplot as plt
+
+segurovida = pd.read_csv("segvida.csv")
+
+
+del(segurovida['NumAseguradoras'])
+del(segurovida['Anio2017'])
+del(segurovida['Anio2016'])
+del(segurovida['Anio2015'])
+del(segurovida['Hombre(2 anios)'])
+del(segurovida['Mujer(2 anios)'])
+del(segurovida['Hombre(3 anios)'])
+del(segurovida['Mujer(3 anios)'])
+del(segurovida['Hombre(4 anios)'])
+del(segurovida['Mujer(4 anios)'])
+del(segurovida['Hombre(5 anios)'])
+del(segurovida['Mujer(5 anios)'])
+del(segurovida['Hombre(6 anios)'])
+del(segurovida['Mujer(6 anios)'])
+
+#
+import pandas as pd
+import matplotlib.pyplot as plt
+
+seguro_acc_enf = pd.read_csv("seg_accidentes_enfermedades.csv")
+del(seguro_acc_enf['Anio2017'])
+del(seguro_acc_enf['Anio2016'])
+del(seguro_acc_enf['Anio2015'])
+
+seguro_acc_enf.rename(columns={'NAH':'Numero Asegurados Hombres'},inplace=True)
+seguro_acc_enf.rename(columns={'NAM':'Numero Asegurados Mujeres'},inplace=True)
